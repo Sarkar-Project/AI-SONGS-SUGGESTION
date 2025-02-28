@@ -30,7 +30,9 @@ const limiter = rateLimit({
   message: { error: "Too many requests, please try again later." },
 });
 app.use(limiter);
-
+app.post("/test", (req, res) => {
+  res.send("running...");
+});
 app.post("/filter-songs", async (req, res) => {
   try {
     const songs = req.body.songs || [];

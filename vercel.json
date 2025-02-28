@@ -2,19 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "api/index.js"
     }
-  ],
-  "environment": {
-    "CLIENT_API_KEY": "@client_api_key",
-    "GEMINI_API_KEY": "@gemini_api_key",
-    "PORT": "3000"
-  }
+  ]
 }
